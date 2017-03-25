@@ -7,8 +7,8 @@ class Spree::Admin::ProductImportsController < Spree::Admin::BaseController
   end
 
   def reset
-    truncated_list = ['spree_products_taxons', 'spree_option_values_variants',
-                      'spree_products_promotion_rules', 'spree_product_option_types']
+    truncated_list = ['spree_products_taxons', 'spree_option_value_variants',
+                      'spree_product_promotion_rules', 'spree_product_option_types']
     result_log = []
     truncated_list.inject(result_log) do |r,t|
       c = "TRUNCATE #{t}"
